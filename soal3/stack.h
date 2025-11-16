@@ -13,10 +13,14 @@ struct Stack {
 };
 
 void create_stack(Stack &S);
-bool is_empty(Stack S);
-bool is_full(Stack S);
+bool isEmpty(Stack &S);
+bool isFull(Stack &S);
 void push(Stack &S, infotype x);
 void pop (Stack &S, infotype &p);
 
+void manageAction(Stack &S_Aksi, Stack &S_Redo, const infotype &aksi);
+void totalDamage(Stack &S, int &damage);
+
+void printStack(Stack &S, string &namaStack);
 
 #endif
