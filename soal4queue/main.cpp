@@ -14,7 +14,6 @@ int main() {
 
     cout << "=== SOAL 4: QUEUE (Antrian Printer) ===" << endl;
     
-
     cout << "\n INISIALISASI ANTRIAN AWAL " << endl;
     enqueue(Q_Printer, createNewElm(doc1)); 
     enqueue(Q_Printer, createNewElm(doc2));

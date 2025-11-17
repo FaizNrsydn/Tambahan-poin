@@ -3,16 +3,16 @@
 
 using namespace std;
 
-void printStack(const Stack &S, const string &name) {
-    cout << name << " [Top=" << S.top << "]: [";
-    for (int i = 0; i <= S.top; i++) {
-        cout << S.info[i];
-        if (i < S.top) {
-            cout << ", ";
-        }
-    }
-    cout << "]" << endl;
-}
+// void printStack(const Stack &S, const string &name) {
+//     cout << name << " [Top=" << S.top << "]: [";
+//     for (int i = 0; i <= S.top; i++) {
+//         cout << S.info[i];
+//         if (i < S.top) {
+//             cout << ", ";
+//         }
+//     }
+//     cout << "]" << endl;
+// }
 
 int main() {
     Stack S_Aksi, S_Redo;
@@ -28,8 +28,10 @@ int main() {
     for (int i = 0; i < num_actions; i++) {
         cout << "\n--- Langkah " << i + 1 << ": " << actions[i] << " ---" << endl;
         manageAction(S_Aksi, S_Redo, actions[i]);
-        printStack(S_Aksi, "Stack Aksi");
-        printStack(S_Redo, "Stack Redo");
+        cout << "Stak Aksi: " << endl;
+        printStack(S_Aksi);
+        cout << "Stak Redo: " << endl;
+        printStack(S_Redo);
     }
 
     int damage = 0;

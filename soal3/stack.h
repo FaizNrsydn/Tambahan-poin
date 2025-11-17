@@ -21,6 +21,6 @@ void pop (Stack &S, infotype &p);
 void manageAction(Stack &S_Aksi, Stack &S_Redo, const infotype &aksi);
 void totalDamage(Stack &S, int &damage);
 
-void printStack(Stack &S, string &namaStack);
+void printStack(Stack &S);
 
 #endif

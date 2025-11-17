@@ -56,7 +56,7 @@ void manageAction(Stack &S_Aksi, Stack &S_Redo, const infotype &aksi) {
     }else {
         push(S_Aksi, aksi);
         create_stack(S_Redo);
-        create_stack(S_Redo); 
+        // create_stack(S_Redo); 
         
         cout << "Aksi baru: '" << aksi << "' ditambahkan. Stack Redo direset." << endl;
     }
@@ -91,12 +91,13 @@ void printStack(Stack &S){
     if(isEmpty(S)){
         cout << "Stack kosong!" << endl;
     }else{
-        cout << "[isi stack nya]" << endl;
+        cout << "[ ";
         for (int i = 0; i <= S.top; i++){
-            cout << S.info [i];
-            if(i < S.top){
-                cout << ", ";
-            }
+            cout << S.info [i] << " ";
         }
+        cout << "]" << endl;
     }
+    cout << "Top = ";
+    cout << S.top << " ";
+    cout << endl;
 }
